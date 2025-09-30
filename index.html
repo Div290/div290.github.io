@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divya Jyoti Bajpai | Portfolio</title>
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -39,14 +34,8 @@
       object-fit: cover;
       background: #ddd;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; margin-bottom: 1rem; }
     header a {
       display: inline-block;
       padding: 0.7rem 1.5rem;
@@ -57,12 +46,8 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    header a:hover {
-      background: #2575fc;
-      color: white;
-    }
+    header a:hover { background: #2575fc; color: white; }
 
-    /* Section General */
     section {
       padding: 3rem 2rem;
       max-width: 1000px;
@@ -75,7 +60,6 @@
       text-align: center;
     }
 
-    /* Glass card style */
     .glass {
       background: rgba(255, 255, 255, 0.7);
       border-radius: 12px;
@@ -91,9 +75,7 @@
     }
 
     /* Updates */
-    .updates ul {
-      list-style: none;
-    }
+    .updates ul { list-style: none; }
     .updates li {
       margin: 0.8rem 0;
       padding: 0.8rem;
@@ -101,15 +83,8 @@
     }
 
     /* Experience */
-    .experience-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .experience-item img {
-      height: 50px;
-      width: auto;
-    }
+    .experience-item { display: flex; align-items: center; gap: 1rem; }
+    .experience-item img { height: 50px; width: auto; }
 
     /* Projects */
     .projects details summary {
@@ -118,19 +93,104 @@
       font-weight: bold;
     }
 
-    /* Contact */
-    .contact form {
-      display: grid;
-      gap: 1rem;
+    /* Contact Details */
+    .contact div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      font-size: 1.05rem;
     }
-    .contact input, .contact textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
+    .contact a {
+      color: #2575fc;
+      font-weight: 500;
+      text-decoration: none;
     }
-    .contact button {
-      padding: 0.8rem;
-      border: none;
-      background: #2575fc;
-      color: white;
+    .contact a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header>
+    <img src="your-photo.jpg" alt="Profile Picture">
+    <h1>Divya Jyoti Bajpai</h1>
+    <p>Researcher | AI Enthusiast | Innovator</p>
+    <a href="#contact">Contact Me</a>
+  </header>
+
+  <!-- Updates -->
+  <section class="updates">
+    <h2>Updates</h2>
+    <div class="glass">
+      <ul>
+        <li>[Sep 2025] Started working on speculative decoding in multimodal models.</li>
+        <li>[Jun 2025] Published paper on adaptive inference with early exits.</li>
+        <li>[Feb 2025] Conducted workshop on online machine learning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="experience">
+    <h2>Work Experience</h2>
+    <div class="glass experience-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Adobe_Corporate_Logo.png" alt="Adobe Logo">
+      <div>
+        <h3>Adobe</h3>
+        <p>Internship details to be added here.</p>
+      </div>
+    </div>
+    <div class="glass experience-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Exxon_Mobil_Logo.svg" alt="ExxonMobil Logo">
+      <div>
+        <h3>ExxonMobil</h3>
+        <p>Internship details to be added here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications/Projects -->
+  <section class="projects">
+    <h2>Publications & Projects</h2>
+    <div class="glass">
+      <strong>Selective Prediction in Deep Networks</strong>
+      <details>
+        <summary>Read Abstract</summary>
+        <p>This work explores selective classification strategies in neural networks, where the model can abstain from uncertain predictions...</p>
+      </details>
+    </div>
+    <div class="glass">
+      <strong>Distributed Inference across Mobile, Edge, and Cloud</strong>
+      <details>
+        <summary>Read Abstract</summary>
+        <p>We propose a distributed inference framework that optimally balances computation between mobile devices, edge servers, and cloud...</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact Details -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="glass">
+      <div>
+        📧 Email: <a href="mailto:divyajyotibajpai290@gmail.com">divyajyotibajpai290@gmail.com</a>
+        <br>💻 GitHub: <a href="https://github.com/Div290">github.com/Div290</a>
+        <br>🔗 LinkedIn: <a href="https://www.linkedin.com/in/divyajyotibajpai">linkedin.com/in/divyajyotibajpai</a>
+        <br>📱 Phone: <span>+91-XXXXXXXXXX</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Divya Jyoti Bajpai. All Rights Reserved.
+  </footer>
+</body>
+</html>
