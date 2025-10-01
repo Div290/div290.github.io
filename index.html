@@ -6,11 +6,7 @@
   <title>Divya Jyoti Bajpai | Portfolio</title>
   <style>
     /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.7;
@@ -58,11 +54,7 @@
     nav a:hover { color: #4a6fa5; }
 
     /* Main Content */
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 3rem; }
     h2 {
       font-size: 1.8rem;
@@ -82,10 +74,7 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .glass:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
+    .glass:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
 
     /* Updates */
     .updates ul { list-style: none; }
@@ -93,6 +82,11 @@
       margin: 0.8rem 0;
       padding: 0.8rem;
       border-left: 5px solid #2575fc;
+    }
+    #updates li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      background: rgba(255, 255, 255, 0.9);
     }
 
     /* Work Experience */
@@ -133,6 +127,7 @@
 
   <!-- Navigation -->
   <nav>
+    <a href="#about">About</a>
     <a href="#updates">Updates</a>
     <a href="#work">Work Experience</a>
     <a href="#projects">Projects</a>
@@ -141,33 +136,43 @@
 
   <!-- Main -->
   <main>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="glass">
+        <p>
+          Hello! I’m <strong>Divya Jyoti Bajpai</strong>, a researcher passionate about 
+          <em>Artificial Intelligence, Machine Learning, and Deep Learning Systems</em>. 
+          My work spans selective prediction, distributed inference, early-exit neural networks, 
+          and adaptive AI systems. I enjoy tackling challenging problems in AI and 
+          contributing to impactful research.  
+        </p>
+        <p>
+          I have collaborated with industry leaders and academic researchers, and my vision 
+          is to create AI systems that are <strong>efficient, trustworthy, and accessible</strong> 
+          to everyone. Outside of research, I enjoy mentoring students, working on open-source 
+          projects, and exploring innovative ideas that bridge theory with practice.
+        </p>
+      </div>
+    </section>
+
     <!-- Updates -->
     <section id="updates">
-    <h2>Updates</h2>
-    <div class="glass" style="background: linear-gradient(145deg, rgba(255,255,255,0.85), rgba(245,245,255,0.7));">
-      <ul style="list-style: none; padding-left: 0;">
-        <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #6a11cb; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-          [Sept 2025] Our paper, <a href="https://www.arxiv.org/abs/2509.23666" target="_blank" style="color:#2575fc; font-weight:600;">"Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</a>, got accepted at the NeurIPS 2025 conference.
-        </li>
-        <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #ff6a00; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-          [May 2025] Our paper <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank" style="color:#2575fc; font-weight:600;">"FREE: Fast and Robust Vision Language Models with Early Exits"</a> got accepted in Findings of ACL 2025.
-        </li>
-        <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #00b09b; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-          [April 2025] Presented my accepted paper <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank" style="color:#2575fc; font-weight:600;">"BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"</a> at ICLR 2025.
-        </li>
-      </ul>
-    </div>
-  </section>
-  
-  <style>
-    /* Hover effect for updates */
-    #updates li:hover {
-      transform: translateX(5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      background: rgba(255, 255, 255, 0.9);
-    }
-  </style>
-
+      <h2>Updates</h2>
+      <div class="glass" style="background: linear-gradient(145deg, rgba(255,255,255,0.85), rgba(245,245,255,0.7));">
+        <ul style="list-style: none; padding-left: 0;">
+          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #6a11cb; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
+            [Sept 2025] Our paper, <a href="https://www.arxiv.org/abs/2509.23666" target="_blank" style="color:#2575fc; font-weight:600;">"Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</a>, got accepted at the NeurIPS 2025 conference.
+          </li>
+          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #ff6a00; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
+            [May 2025] Our paper <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank" style="color:#2575fc; font-weight:600;">"FREE: Fast and Robust Vision Language Models with Early Exits"</a> got accepted in Findings of ACL 2025.
+          </li>
+          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #00b09b; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
+            [April 2025] Presented my accepted paper <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank" style="color:#2575fc; font-weight:600;">"BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"</a> at ICLR 2025.
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Work Experience -->
     <section id="work">
