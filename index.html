@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Divya Jyoti Bajpai | Portfolio</title>
+  <title>Divya Jyoti Bajpai | Portfolio & Research</title>
   <style>
     /* General Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -54,7 +54,7 @@
     nav a:hover { color: #4a6fa5; }
 
     /* Main Content */
-    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 3rem; }
     h2 {
       font-size: 1.8rem;
@@ -76,18 +76,9 @@
     }
     .glass:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
 
-    /* Updates */
-    .updates ul { list-style: none; }
-    .updates li {
-      margin: 0.8rem 0;
-      padding: 0.8rem;
-      border-left: 5px solid #2575fc;
-    }
-    #updates li:hover {
-      transform: translateX(5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      background: rgba(255, 255, 255, 0.9);
-    }
+    /* Lists */
+    ul { list-style: none; padding-left: 0; }
+    li { margin: 0.8rem 0; padding: 0.8rem; border-left: 5px solid #2575fc; }
 
     /* Work Experience */
     .experience-item { display: flex; align-items: center; gap: 1rem; }
@@ -99,6 +90,9 @@
       color: #4a6fa5;
       font-weight: bold;
     }
+
+    /* Publications */
+    .publications li { margin: 0.8rem 0; padding-left: 0.5rem; }
 
     /* Contact */
     .contact div { display: flex; flex-direction: column; gap: 0.8rem; font-size: 1.05rem; }
@@ -130,7 +124,9 @@
     <a href="#about">About</a>
     <a href="#updates">Updates</a>
     <a href="#work">Work Experience</a>
+    <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
+    <a href="#research">Research Highlights</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -141,40 +137,32 @@
       <h2>About Me</h2>
       <div class="glass">
         <p>
-         Hello! I’m <strong>Divya Jyoti Bajpai</strong>, a researcher deeply passionate about 
-        <em>Artificial Intelligence, Machine Learning, and Deep Learning Systems</em>. 
-        My research focuses on developing methods to reduce inference latency in 
-        generative models such as Large Language Models (LLMs) and Diffusion Models, 
-        with a particular emphasis on Flow Matching–based approaches. 
-        I leverage techniques like <strong>Early Exits</strong> and <strong>Speculative Decoding</strong> 
-        to achieve faster and more reliable inference.  
-        Beyond this, I also explore <strong>distributed inference</strong> strategies for large AI models, 
-        enabling their optimal deployment across mobile devices, edge servers, and the cloud. 
-         </p>
-         </p>
-        I have collaborated with industry leaders and academic researchers, and my vision 
+          Hello! I’m <strong>Divya Jyoti Bajpai</strong>, a researcher deeply passionate about 
+          <em>Artificial Intelligence, Machine Learning, and Deep Learning Systems</em>. 
+          My research focuses on developing methods to reduce inference latency in 
+          generative models such as Large Language Models (LLMs) and Diffusion Models, 
+          with a particular emphasis on Flow Matching–based approaches. 
+          I leverage techniques like <strong>Early Exits</strong> and <strong>Speculative Decoding</strong> 
+          to achieve faster and more reliable inference.  
+          Beyond this, I also explore <strong>distributed inference</strong> strategies for large AI models, 
+          enabling their optimal deployment across mobile devices, edge servers, and the cloud.
+        </p>
+        <p>
+          I have collaborated with industry leaders and academic researchers, and my vision 
           is to create AI systems that are <strong>efficient, trustworthy, and accessible</strong> 
-          to everyone.
-        Outside of research, I enjoy playing cricket, exploring online games, and listening to music.
-        </p>          
-       
+          to everyone. Outside of research, I enjoy playing cricket, exploring online games, and listening to music.
+        </p>
       </div>
     </section>
 
     <!-- Updates -->
     <section id="updates">
       <h2>Updates</h2>
-      <div class="glass" style="background: linear-gradient(145deg, rgba(255,255,255,0.85), rgba(245,245,255,0.7));">
-        <ul style="list-style: none; padding-left: 0;">
-          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #6a11cb; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-            [Sept 2025] Our paper, <a href="https://www.arxiv.org/abs/2509.23666" target="_blank" style="color:#2575fc; font-weight:600;">"Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</a>, got accepted at the NeurIPS 2025 conference.
-          </li>
-          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #ff6a00; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-            [May 2025] Our paper <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank" style="color:#2575fc; font-weight:600;">"FREE: Fast and Robust Vision Language Models with Early Exits"</a> got accepted in Findings of ACL 2025.
-          </li>
-          <li style="margin: 1rem 0; padding: 1rem; border-left: 6px solid #00b09b; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s;">
-            [April 2025] Presented my accepted paper <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank" style="color:#2575fc; font-weight:600;">"BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"</a> at ICLR 2025.
-          </li>
+      <div class="glass">
+        <ul>
+          <li>[Sept 2025] Our paper, <a href="https://www.arxiv.org/abs/2509.23666" target="_blank">"Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</a>, accepted at NeurIPS 2025.</li>
+          <li>[May 2025] Our paper, <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank">"FREE: Fast and Robust Vision Language Models with Early Exits"</a>, accepted in Findings of ACL 2025.</li>
+          <li>[April 2025] Presented <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank">"BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"</a> at ICLR 2025.</li>
         </ul>
       </div>
     </section>
@@ -185,30 +173,42 @@
       <div class="glass experience-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Adobe_Corporate_Logo.png" alt="Adobe Logo">
         <div>
-          <h3>Adobe</h3>
-          <p>Internship details to be added here.</p>
+          <h3>Adobe Research India</h3>
+          <p>Research Intern – Worked on reducing inference latency in generative AI models using Early Exit & Speculative Decoding techniques.</p>
         </div>
       </div>
       <div class="glass experience-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Exxon_Mobil_Logo.svg" alt="ExxonMobil Logo">
         <div>
           <h3>ExxonMobil</h3>
-          <p>Internship details to be added here.</p>
+          <p>Internship – Details about role/projects can go here.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects / Publications -->
-    <section id="projects">
-      <h2>Publications & Projects</h2>
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
       <div class="glass">
+        <ul class="publications">
+          <li><strong>Beyond Greedy Exits:</strong> NeurIPS 2025. <a href="https://www.arxiv.org/abs/2509.23666" target="_blank">Read Paper</a></li>
+          <li><strong>FREE: Fast and Robust Vision Language Models with Early Exits:</strong> Findings of ACL 2025. <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank">Read Paper</a></li>
+          <li><strong>BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts:</strong> ICLR 2025. <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank">Read Paper</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="glass projects">
         <strong>Selective Prediction in Deep Networks</strong>
         <details>
           <summary>Read Abstract</summary>
           <p>This work explores selective classification strategies in neural networks, where the model can abstain from uncertain predictions...</p>
         </details>
       </div>
-      <div class="glass">
+      <div class="glass projects">
         <strong>Distributed Inference across Mobile, Edge, and Cloud</strong>
         <details>
           <summary>Read Abstract</summary>
@@ -217,7 +217,35 @@
       </div>
     </section>
 
-    <!-- Contact Details -->
+    <!-- Research Highlights -->
+    <section id="research">
+      <h2>Research Highlights (from Resume)</h2>
+      <div class="glass">
+        <h3>FlowCast: Trajectory Forecasting for Scalable Zero-Cost Speculative Flow Matching</h3>
+        <p>Research focus: <strong>Flow Matching, Speculative Decoding, and Efficient AI Inference</strong></p>
+        <ul>
+          <li>Developed FlowCast method for zero-cost speculative flow matching in generative models.</li>
+          <li>Achieved scalable inference without sacrificing accuracy using multi-exit classifiers.</li>
+          <li>Collaborated with Adobe Research and academic institutions to validate methods on LLMs and diffusion models.</li>
+        </ul>
+
+        <h3>Additional Research & Methodology</h3>
+        <ul>
+          <li>Adaptive early exit strategies for reducing model inference time.</li>
+          <li>Speculative decoding acceleration methods for transformer-based architectures.</li>
+          <li>Distributed inference techniques for large-scale AI models across mobile, edge, and cloud.</li>
+        </ul>
+
+        <h3>Experiments & Results</h3>
+        <ul>
+          <li>Benchmarked LLM and vision-language models with FlowCast and Early Exit methods.</li>
+          <li>Observed significant speed-ups with minimal accuracy loss in large-scale deployments.</li>
+          <li>Evaluated using custom metrics for reliability and risk-aware selective prediction.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="glass contact">
@@ -231,6 +259,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     © 2025 Divya Jyoti Bajpai. All Rights Reserved.
   </footer>
