@@ -37,12 +37,14 @@
     }
     header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
     header p { font-size: 1.2rem; opacity: 0.9; }
+    header .subtitle { font-size: 1rem; opacity: 0.85; margin-top: 0.5rem; }
 
     /* Navigation */
     nav {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       padding: 1rem;
       background: white;
       position: sticky;
@@ -50,11 +52,20 @@
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    nav a { font-weight: 500; color: #555; transition: color 0.3s ease; }
-    nav a:hover { color: #4a6fa5; }
+    nav a { 
+      font-weight: 500; 
+      color: #555; 
+      transition: color 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+    nav a:hover { 
+      color: #4a6fa5; 
+      background: rgba(74, 111, 165, 0.1);
+    }
 
     /* Main Content */
-    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 3rem; }
     h2 {
       font-size: 1.8rem;
@@ -62,6 +73,11 @@
       color: #4a6fa5;
       border-left: 4px solid #74c7d5;
       padding-left: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      color: #555;
+      margin-bottom: 0.5rem;
     }
 
     /* Glass Card Style */
@@ -76,28 +92,171 @@
     }
     .glass:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
 
-    /* Lists */
-    ul { list-style: none; padding-left: 0; }
-    li { margin: 0.8rem 0; padding: 0.8rem; border-left: 5px solid #2575fc; }
+    /* Education */
+    .education-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .education-item:last-child { border-bottom: none; }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .edu-title { font-weight: bold; color: #4a6fa5; }
+    .edu-location { color: #777; font-size: 0.95rem; }
+    .edu-details { color: #666; font-style: italic; margin: 0.3rem 0; }
+    .edu-courses { color: #555; font-size: 0.95rem; margin-top: 0.5rem; }
 
     /* Work Experience */
-    .experience-item { display: flex; align-items: center; gap: 1rem; }
-    .experience-item img { height: 50px; width: auto; }
-
-    /* Projects / Publications */
-    .projects details summary {
-      cursor: pointer;
-      color: #4a6fa5;
-      font-weight: bold;
+    .experience-item { 
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .exp-title { font-weight: bold; color: #4a6fa5; font-size: 1.1rem; }
+    .exp-location { color: #777; }
+    .exp-role { color: #666; font-style: italic; margin: 0.3rem 0; }
+    .exp-period { color: #888; font-size: 0.9rem; }
+    .experience-item ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-top: 0.8rem;
+    }
+    .experience-item li {
+      margin: 0.5rem 0;
+      color: #555;
+      border-left: none;
+      padding: 0;
     }
 
     /* Publications */
-    .publications li { margin: 0.8rem 0; padding-left: 0.5rem; }
+    .pub-item {
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      border-left: 3px solid #2575fc;
+    }
+    .pub-title { 
+      font-weight: bold; 
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+    .pub-authors { 
+      color: #666; 
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .pub-venue { 
+      color: #4a6fa5; 
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .pub-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      background: #4a6fa5;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .pub-link:hover { background: #3a5a85; }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+    }
+    .project-title { 
+      font-weight: bold; 
+      color: #4a6fa5;
+      margin-bottom: 0.5rem;
+    }
+    .project-guide { 
+      font-size: 0.9rem; 
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .project-desc { color: #555; }
+
+    /* Skills */
+    .skill-category {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+    }
+    .skill-category strong { color: #4a6fa5; }
+
+    /* Achievements */
+    .achievement-item {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      border-left: 3px solid #74c7d5;
+    }
+    .achievement-title { font-weight: bold; color: #333; }
+    .achievement-desc { color: #666; margin-top: 0.3rem; }
+
+    /* Leadership */
+    .leadership-item {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+    }
+    .leadership-title { font-weight: bold; color: #4a6fa5; }
+    .leadership-desc { color: #666; margin-top: 0.3rem; }
 
     /* Contact */
-    .contact div { display: flex; flex-direction: column; gap: 0.8rem; font-size: 1.05rem; }
-    .contact a { color: #4a6fa5; font-weight: 500; }
-    .contact a:hover { text-decoration: underline; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .contact-item {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .contact-item a { 
+      color: #4a6fa5; 
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .contact-item a:hover { 
+      color: #2575fc;
+      text-decoration: underline; 
+    }
+
+    /* Lists */
+    ul.simple-list { list-style: none; padding-left: 0; }
+    ul.simple-list li { 
+      margin: 0.8rem 0; 
+      padding: 0.8rem; 
+      border-left: 5px solid #2575fc;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
 
     /* Footer */
     footer {
@@ -109,6 +268,13 @@
       border-top: 1px solid #e5e5e5;
       backdrop-filter: blur(6px);
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      nav { gap: 0.8rem; }
+      .edu-header, .exp-header { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -116,17 +282,21 @@
   <header>
     <img src="https://raw.githubusercontent.com/Div290/div290.github.io/main/Divya.jpeg" alt="Profile Picture">
     <h1>Divya Jyoti Bajpai</h1>
-    <p>Researcher | AI Enthusiast | Innovator</p>
+    <p>Research Scholar, IEOR, IIT Bombay</p>
+    <p class="subtitle">Ph.D. (PMRF) | AI Research | Machine Learning</p>
   </header>
 
   <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
     <a href="#updates">Updates</a>
-    <a href="#work">Work Experience</a>
+    <a href="#work">Experience</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
-    <a href="#research">Research Highlights</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#leadership">Leadership</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -137,32 +307,76 @@
       <h2>About Me</h2>
       <div class="glass">
         <p>
-          Hello! I’m <strong>Divya Jyoti Bajpai</strong>, a researcher deeply passionate about 
-          <em>Artificial Intelligence, Machine Learning, and Deep Learning Systems</em>. 
-          My research focuses on developing methods to reduce inference latency in 
-          generative models such as Large Language Models (LLMs) and Diffusion Models, 
-          with a particular emphasis on Flow Matching–based approaches. 
-          I leverage techniques like <strong>Early Exits</strong> and <strong>Speculative Decoding</strong> 
-          to achieve faster and more reliable inference.  
-          Beyond this, I also explore <strong>distributed inference</strong> strategies for large AI models, 
-          enabling their optimal deployment across mobile devices, edge servers, and the cloud.
+          Hello! I'm <strong>Divya Jyoti Bajpai</strong>, a Ph.D. (PMRF) Research Scholar at the 
+          <strong>Department of Industrial Engineering and Operations Research, IIT Bombay</strong>. 
+          My research focuses on <em>Inference Latency Reduction in Generative Models</em>, 
+          specifically targeting Large Language Models (LLMs) and Diffusion Models.
         </p>
         <p>
-          I have collaborated with industry leaders and academic researchers, and my vision 
-          is to create AI systems that are <strong>efficient, trustworthy, and accessible</strong> 
-          to everyone. Outside of research, I enjoy playing cricket, exploring online games, and listening to music.
+          I develop novel techniques leveraging <strong>Early Exits</strong>, <strong>Speculative Decoding</strong>, 
+          and <strong>Flow Matching</strong> to achieve faster and more reliable AI inference. 
+          My work explores distributed inference strategies across mobile devices, edge servers, and cloud infrastructure, 
+          making large-scale AI models more accessible and efficient.
         </p>
+        <p>
+          I have collaborated with leading industry researchers at <strong>Adobe Research India</strong> and 
+          <strong>Amazon–IIT Bombay AI/ML Initiative</strong>, publishing extensively at top-tier conferences 
+          including <strong>ICLR, NeurIPS, ACL, EMNLP</strong>, and others. 
+          My vision is to create AI systems that are <strong>efficient, trustworthy, and accessible</strong> to everyone.
+        </p>
+        <p>
+          Beyond research, I enjoy playing cricket, exploring online games, and listening to music.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="glass">
+        <div class="education-item">
+          <div class="edu-header">
+            <span class="edu-title">Ph.D. (PMRF) in Industrial Engineering and Operations Research</span>
+            <span class="edu-location">IIT Bombay, Mumbai</span>
+          </div>
+          <div class="edu-details">July 2022 – Present</div>
+          <div class="edu-courses">
+            <strong>Topic:</strong> Inference Latency Reduction in Generative Models (LLMs and Diffusion Models)
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="edu-header">
+            <span class="edu-title">M.Tech. in Industrial Engineering and Operations Research</span>
+            <span class="edu-location">IIT Bombay, Mumbai</span>
+          </div>
+          <div class="edu-details">July 2020 – May 2022 | <strong>CPI: 9.01</strong> (First in 2020 batch)</div>
+          <div class="edu-courses">
+            <strong>Relevant Courses:</strong> Machine Learning, Deep Learning, Reinforcement Learning, Mathematical Optimization Techniques
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="edu-header">
+            <span class="edu-title">B.Sc. (Hons.) Mathematics</span>
+            <span class="edu-location">University of Delhi, Delhi</span>
+          </div>
+          <div class="edu-details">July 2017 – May 2020 | <strong>CPI: 8.932</strong> (Second in 2017 batch)</div>
+        </div>
       </div>
     </section>
 
     <!-- Updates -->
     <section id="updates">
-      <h2>Updates</h2>
+      <h2>Recent Updates</h2>
       <div class="glass">
-        <ul>
-          <li>[Sept 2025] Our paper, <a href="https://www.arxiv.org/abs/2509.23666" target="_blank">"Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</a>, accepted at NeurIPS 2025.</li>
-          <li>[May 2025] Our paper, <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank">"FREE: Fast and Robust Vision Language Models with Early Exits"</a>, accepted in Findings of ACL 2025.</li>
-          <li>[April 2025] Presented <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank">"BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"</a> at ICLR 2025.</li>
+        <ul class="simple-list">
+          <li><strong>[Jan 2026]</strong> Two papers accepted at <strong>ICLR 2026</strong>: "FlowCast" and "FastFlow"</li>
+          <li><strong>[Sept 2025]</strong> Paper accepted at <strong>NeurIPS 2025</strong>: "Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability"</li>
+          <li><strong>[May 2025]</strong> Started Research Internship at <strong>Adobe Research India</strong></li>
+          <li><strong>[May 2025]</strong> Paper accepted in Findings of <strong>ACL 2025</strong>: "FREE: Fast and Robust Vision Language Models with Early Exits"</li>
+          <li><strong>[April 2025]</strong> Presented "BEEM" at <strong>ICLR 2025</strong></li>
+          <li><strong>[Jan 2025]</strong> Received <strong>Best Paper Award</strong> at AIMLSystems 2025</li>
         </ul>
       </div>
     </section>
@@ -170,90 +384,312 @@
     <!-- Work Experience -->
     <section id="work">
       <h2>Work Experience</h2>
-      <div class="glass experience-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Adobe_Corporate_Logo.png" alt="Adobe Logo">
-        <div>
-          <h3>Adobe Research India</h3>
-          <p>Research Intern – Worked on reducing inference latency in generative AI models using Early Exit & Speculative Decoding techniques.</p>
+      <div class="glass">
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Adobe Research India</span>
+            <span class="exp-location">Bengaluru</span>
+          </div>
+          <div class="exp-role">Research Intern</div>
+          <div class="exp-period">May 2025 – August 2025</div>
+          <div style="color: #666; font-size: 0.9rem; margin-top: 0.3rem;">
+            Supervisors: Apoorv Saxena, Shubham Agarwal, Kuldeep Kulkarni, Subrata Mitra
+          </div>
+          <ul>
+            <li>Developed a plug-and-play inference-time optimization technique based on <strong>Speculative Decoding</strong> for image and video generation models</li>
+            <li>Achieved an inference speedup of <strong>2.65×</strong> without any degradation in output quality or model performance</li>
+            <li>The proposed approach requires no additional training or architectural modifications, enabling seamless integration into existing generative pipelines</li>
+            <li>The work got published as a full paper at <strong>ICLR 2026</strong></li>
+          </ul>
         </div>
-      </div>
-      <div class="glass experience-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Exxon_Mobil_Logo.svg" alt="ExxonMobil Logo">
-        <div>
-          <h3>ExxonMobil</h3>
-          <p>Internship – Details about role/projects can go here.</p>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Amazon–IIT Bombay AI/ML Research Initiative</span>
+            <span class="exp-location">Mumbai</span>
+          </div>
+          <div class="exp-role">Research Collaborator</div>
+          <div class="exp-period">January 2025 – Ongoing</div>
+          <ul>
+            <li>Collaborated with Amazon Scientists to solve inference latency and reliability concerns in Generative AI models</li>
+            <li>Applied <strong>Reinforcement Learning</strong>-based techniques to design reward-based objectives for reducing inference latency in Flow-Matching-based image and video generation models</li>
+            <li>Achieved <strong>2.6× speedup</strong> in generation with minimal performance loss</li>
+            <li>The work got published as a full paper at <strong>ICLR 2026</strong></li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">ExxonMobil</span>
+            <span class="exp-location">Bengaluru</span>
+          </div>
+          <div class="exp-role">Data Scientist Intern</div>
+          <div class="exp-period">May 2021 – July 2021</div>
+          <div style="color: #666; font-size: 0.9rem; margin-top: 0.3rem;">
+            Supervisor: Anoop Mullur
+          </div>
+          <ul>
+            <li>Developed an <strong>XGBoost-based predictive model</strong> to estimate time-to-failure for multiphase pump seals using highly imbalanced sensor data (only two failure instances)</li>
+            <li>Performed extensive <strong>feature engineering</strong> on temperature, pressure, flow speed, and gas ratio to enhance signal quality and model robustness</li>
+            <li>Achieved an overall <strong>92% predictive accuracy</strong> by addressing data imbalance through synthetic sampling and model calibration</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Publications -->
     <section id="publications">
-      <h2>Publications</h2>
+      <h2>Selected Publications</h2>
       <div class="glass">
-        <ul class="publications">
-          <li><strong>Beyond Greedy Exits:</strong> NeurIPS 2025. <a href="https://www.arxiv.org/abs/2509.23666" target="_blank">Read Paper</a></li>
-          <li><strong>FREE: Fast and Robust Vision Language Models with Early Exits:</strong> Findings of ACL 2025. <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank">Read Paper</a></li>
-          <li><strong>BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts:</strong> ICLR 2025. <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank">Read Paper</a></li>
-        </ul>
+        <div class="pub-item">
+          <div class="pub-title">FlowCast: Trajectory Forecasting for Scalable Zero-Cost Speculative Flow Matching</div>
+          <div class="pub-authors">Bajpai, D. J.; Agarwal, S.; Saxena, A.; Kulkarni, K.; Mitra, S.; Hanawal, M. K.</div>
+          <div class="pub-venue">ICLR 2026</div>
+          <a href="https://openreview.net/forum?id=gv8R88PVEG" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">FastFlow: Accelerating The Generative Flow Matching Models with Bandit Inference</div>
+          <div class="pub-authors">Bajpai, D. J.; Bhardwaj, D.; Roy, S.; Duseja, T.; Agarwal, H.; Sandansing, A.; Hanawal, M. K.</div>
+          <div class="pub-venue">ICLR 2026</div>
+          <a href="https://openreview.net/forum?id=gv8R88PVEG" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">NeurIPS 2025</div>
+          <a href="https://www.arxiv.org/abs/2509.23666" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">ICLR 2025</div>
+          <a href="https://openreview.net/forum?id=EzrZX9bd4G" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">FREE: Fast and Robust Vision Language Models with Early Exits</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">Findings of ACL 2025</div>
+          <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">CAPEEN: Image Captioning with Early Exits and Knowledge Distillation</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">EMNLP 2024</div>
+          <a href="https://aclanthology.org/2024.findings-emnlp.376.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">DAdEE: Unsupervised Domain Adaptation in Early Exit PLMs</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">EMNLP 2024</div>
+          <a href="https://aclanthology.org/2024.findings-emnlp.371.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">CeeBERT: Cross-domain Inference in Early Exit BERT</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">ACL 2024</div>
+          <a href="https://aclanthology.org/2024.findings-acl.101.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">FAIR: Filtering of Automatically Induced Rules</div>
+          <div class="pub-authors">Bajpai, D. J.; Maheshwari, A.; Hanawal, M.; Ramakrishnan, G.</div>
+          <div class="pub-venue">EACL 2024</div>
+          <a href="https://aclanthology.org/2025.findings-acl.1209.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">AACL 2025</div>
+          <a href="https://aclanthology.org/2025.ijcnlp-long.64.pdf" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Know What You Don't Know: Selective Prediction for Early Exit DNNs</div>
+          <div class="pub-authors">Bajpai, D. J.; Hanawal, M. K.</div>
+          <div class="pub-venue">AIMLSystems 2025 🏆 Best Paper Award</div>
+          <a href="https://www.arxiv.org/abs/2509.11520" target="_blank" class="pub-link">Paper Link</a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">UCBEE: A Multi Armed Bandit Approach for Early-Exit in Neural Networks</div>
+          <div class="pub-authors">Pacheco, R. G.; Bajpai, D. J.; Shifrin, M.; Couto, R. S.; Menasche, D. S.; Hanawal, M. K.</div>
+          <div class="pub-venue">IEEE TNSM 2024</div>
+          <a href="https://ieeexplore.ieee.org/document/10714362" target="_blank" class="pub-link">Paper Link</a>
+        </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="glass projects">
-        <strong>Selective Prediction in Deep Networks</strong>
-        <details>
-          <summary>Read Abstract</summary>
-          <p>This work explores selective classification strategies in neural networks, where the model can abstain from uncertain predictions...</p>
-        </details>
-      </div>
-      <div class="glass projects">
-        <strong>Distributed Inference across Mobile, Edge, and Cloud</strong>
-        <details>
-          <summary>Read Abstract</summary>
-          <p>We propose a distributed inference framework that optimally balances computation between mobile devices, edge servers, and cloud...</p>
-        </details>
+      <h2>Key Projects</h2>
+      <div class="glass">
+        <div class="project-item">
+          <div class="project-title">Unsupervised Learning of Early Exits in BERT</div>
+          <div class="project-guide">Guide: Prof. Manjesh K. Hanawal, IEOR, IIT Bombay</div>
+          <div class="project-desc">
+            Designed an algorithm to learn the optimal threshold for exiting at intermediate layers in an 
+            unsupervised online setup. Achieved on average <strong>49× less latency</strong> with an average 
+            decrease in accuracy of only 3.7%.
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">Heart Failure Prediction Model</div>
+          <div class="project-guide">Guide: Prof. Preethi Jyoti, CSE Dept., IIT Bombay</div>
+          <div class="project-desc">
+            Modelled the prediction of heart failure using Machine Learning techniques including 
+            Variance Inflation Factor and Random Forest. Achieved <strong>90% accuracy</strong> on test data.
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">Finite Time Analysis of Kernelised Contextual Bandits</div>
+          <div class="project-guide">Guide: Prof. Manjesh K. Hanawal, IEOR, IIT Bombay</div>
+          <div class="project-desc">
+            Implemented and evaluated Kernel UCB and LinUCB on a news recommendation task 
+            (102 features, 10 arms), demonstrating superior performance of chi-square Kernel UCB 
+            over other kernels and UCB methods.
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">MLP Mixer: An All-MLP Architecture for Vision</div>
+          <div class="project-guide">Guide: Prof. P. Balmurugan, IEOR, IIT Bombay</div>
+          <div class="project-desc">
+            Implemented and extended the MLP Mixer architecture, experimenting with different 
+            numbers of layers and activation functions to achieve better performance on ImageNet dataset.
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title">No-Regret Exploration in Goal-Oriented Reinforcement Learning</div>
+          <div class="project-guide">Guide: Prof. N. Hemachandra, IEOR, IIT Bombay</div>
+          <div class="project-desc">
+            Explored the Stochastic Shortest Path problem and compared UCRL2 and UC-SSP algorithms. 
+            Implemented UC-SSP algorithm for non-constant cost case on 3×4 gridworld.
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Research Highlights -->
-    <section id="research">
-      <h2>Research Highlights (from Resume)</h2>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
       <div class="glass">
-        <h3>FlowCast: Trajectory Forecasting for Scalable Zero-Cost Speculative Flow Matching</h3>
-        <p>Research focus: <strong>Flow Matching, Speculative Decoding, and Efficient AI Inference</strong></p>
-        <ul>
-          <li>Developed FlowCast method for zero-cost speculative flow matching in generative models.</li>
-          <li>Achieved scalable inference without sacrificing accuracy using multi-exit classifiers.</li>
-          <li>Collaborated with Adobe Research and academic institutions to validate methods on LLMs and diffusion models.</li>
-        </ul>
+        <div class="skill-category">
+          <strong>Programming Languages:</strong> Python, MATLAB, Scilab
+        </div>
+        <div class="skill-category">
+          <strong>Libraries & Frameworks:</strong> PyTorch, TensorFlow, NumPy, Pandas, Scikit-learn
+        </div>
+        <div class="skill-category">
+          <strong>Tools:</strong> Git, LaTeX, Linux
+        </div>
+      </div>
+    </section>
 
-        <h3>Additional Research & Methodology</h3>
-        <ul>
-          <li>Adaptive early exit strategies for reducing model inference time.</li>
-          <li>Speculative decoding acceleration methods for transformer-based architectures.</li>
-          <li>Distributed inference techniques for large-scale AI models across mobile, edge, and cloud.</li>
-        </ul>
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>Achievements & Awards</h2>
+      <div class="glass">
+        <div class="achievement-item">
+          <div class="achievement-title">🏆 Best Paper Award (AIMLSystems 2025)</div>
+          <div class="achievement-desc">"Know What You Don't Know: Selective Prediction for Early Exit DNNs"</div>
+        </div>
 
-        <h3>Experiments & Results</h3>
-        <ul>
-          <li>Benchmarked LLM and vision-language models with FlowCast and Early Exit methods.</li>
-          <li>Observed significant speed-ups with minimal accuracy loss in large-scale deployments.</li>
-          <li>Evaluated using custom metrics for reliability and risk-aware selective prediction.</li>
-        </ul>
+        <div class="achievement-item">
+          <div class="achievement-title">🎓 Prime Minister's Research Fellowship (PMRF)</div>
+          <div class="achievement-desc">Ph.D. Scholar at IIT Bombay</div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-title">🥇 First Rank in M.Tech. Batch (2020)</div>
+          <div class="achievement-desc">CPI: 9.01 | Industrial Engineering and Operations Research, IIT Bombay</div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-title">🥈 Second Rank in B.Sc. Batch (2017)</div>
+          <div class="achievement-desc">CPI: 8.932 | Mathematics (Hons.), University of Delhi</div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-title">🎯 IIT-JAM (Mathematics)</div>
+          <div class="achievement-desc">All India Rank 31</div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-title">✅ TIFR Entrance Examination</div>
+          <div class="achievement-desc">Cleared MSc (Mathematics) entrance exam</div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-title">✅ UPSC-NDA Examination</div>
+          <div class="achievement-desc">Cleared NDA exam (2018)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership">
+      <h2>Leadership & Service</h2>
+      <div class="glass">
+        <div class="leadership-item">
+          <div class="leadership-title">Outreach Manager, TCAI, IIT Bombay</div>
+          <div class="leadership-desc">Led industry collaborations in Artificial Intelligence</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="leadership-title">Joint Secretary (Academics), IEOR Department</div>
+          <div class="leadership-desc">Organized academic workshops and supported student initiatives</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="leadership-title">Member, IDPC, IEOR Department</div>
+          <div class="leadership-desc">Proposed and reviewed curriculum and course updates</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="leadership-title">Conference Reviewer</div>
+          <div class="leadership-desc">NeurIPS, ICLR, ACL, EMNLP</div>
+        </div>
+
+        <div class="leadership-item">
+          <div class="leadership-title">Teaching Assistant, IIT Bombay</div>
+          <div class="leadership-desc">Machine Learning (IE506), Engineering Statistics (IE605)</div>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <div class="glass contact">
-        <div>
-          📧 Email: <a href="mailto:divyajyotibajpai290@gmail.com">divyajyotibajpai290@gmail.com</a><br>
-          💻 GitHub: <a href="https://github.com/Div290">github.com/Div290</a><br>
-          🔗 LinkedIn: <a href="https://www.linkedin.com/in/divyajyotibajpai">linkedin.com/in/divyajyotibajpai</a><br>
-          📱 Phone: <span>+91-XXXXXXXXXX</span>
+      <div class="glass">
+        <div class="contact-grid">
+          <div class="contact-item">
+            📧 <strong>Email</strong><br>
+            <a href="mailto:divyajyoti.bajpai@iitb.ac.in">divyajyoti.bajpai@iitb.ac.in</a><br>
+            <a href="mailto:divyajyotibajpai290@gmail.com">divyajyotibajpai290@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            💻 <strong>GitHub</strong><br>
+            <a href="https://github.com/Div290" target="_blank">github.com/Div290</a>
+          </div>
+          <div class="contact-item">
+            🔗 <strong>LinkedIn</strong><br>
+            <a href="https://www.linkedin.com/in/divyajyotibajpai" target="_blank">linkedin.com/in/divyajyotibajpai</a>
+          </div>
+          <div class="contact-item">
+            📱 <strong>Phone</strong><br>
+            <span>+91-6388436571</span>
+          </div>
         </div>
       </div>
     </section>
